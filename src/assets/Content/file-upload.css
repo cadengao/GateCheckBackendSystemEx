@@ -1,0 +1,97 @@
+﻿
+.uploader {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px 0px;
+    border-radius: .25rem;
+}
+
+
+.filename {
+    float: left;
+    display: inline-block;
+    outline: 0 none;
+    height: 38px;
+    width: 585px;
+    margin: 0;
+    padding: .375rem .75rem;
+    overflow: hidden;
+    cursor: default;
+    border: 1px solid;
+    border-right: 0;
+    color: #777;
+    text-shadow: 1px 1px 0px #fff;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: .25rem 0 0 .25rem;
+    background: #f5f5f5;
+    border-color: #ccc;
+    box-sizing: border-box;
+}
+
+.button {
+    float: left;
+    height: 38px;
+    width: 115px;
+    display: inline-block;
+    outline: 0 none;
+    padding: .375rem .75rem;
+    margin: 0;
+    font: 400 1rem;
+    border-radius: 0 .25rem .25rem 0;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+
+.fileup-progress {
+    display: inline-block;
+    background-color: #E5E5E5;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.fileup-progress-bar {
+    width: 1px;
+    height: 3px;
+    overflow: hidden;
+    background-color: #0099ff;
+    -webkit-transition: width .1s ease-out 0.1s;
+    -moz-transition: width .1s ease-out 0.1s;
+    -o-transition: width .1s ease-out 0.1s;
+    transition: width .1s ease-out 0.1s
+}
+
+
+.uploader input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 38px;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+
+
+/* White Color Scheme ------------------------ */
+
+.white .button {
+    color: #ffffff;
+    background: #007bff;
+    border-color: #007bff;
+}
+
+.white:hover .button {
+    color: #ffffff;
+    background: #0069d9;
+    border-color: #0062cc;
+}

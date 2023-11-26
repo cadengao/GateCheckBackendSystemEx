@@ -1,0 +1,50 @@
+﻿.radio input[type=radio] {
+    display: none; /*removes original button*/
+}
+
+.radio label { /* add this so dot is relative to the label */
+    position: relative;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.radio input[type=radio] + label:before {
+    height: 17px;
+    width: 17px;
+    content: " ";
+    display: inline-block;
+    vertical-align: text-top;
+    border: 1px solid #cccccc;
+    margin: 0 5px 5px 0;
+    border-radius: 11px;
+    background-color: transparent;
+    vertical-align: middle; /* add this so text is vertically centred next to ring */
+}
+
+.radio input[type=radio]:disabled + label:before {
+    background: gray;
+    opacity: .16;
+}
+
+.radio input[type=radio]:disabled + label:after {
+    background: gray;
+    opacity: .16;
+}
+
+.radio input[type=radio]:checked + label:before {
+    background: #318EF8;
+    opacity: 1;
+}
+
+/* remove the first label from this selector */
+.radio input[type='radio']:checked + label:after { /*styles inside circle*/
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 9px; /* I have changed the top and left so this is in the centre */
+    left: 6px;
+    content: " ";
+    display: block;
+    background-color: white;
+}

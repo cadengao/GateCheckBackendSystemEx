@@ -1,0 +1,132 @@
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+p {
+    margin-bottom: 0px;
+}
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+
+/*-------------------------
+	The content section
+--------------------------*/
+
+
+#content {
+    background-color: #FFF;
+    border-radius: 4px;
+    padding: 0px;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto 100px;
+}
+
+
+/*-------------------------
+	Inline help tip
+--------------------------*/
+
+
+.help-tip {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: default;
+    border: 1px solid #000;
+}
+
+    .help-tip:before {
+        content: '?';
+        font-weight: bold;
+        color: #000;
+    }
+
+    .help-tip:hover p {
+        z-index: 10000;
+        display: block;
+        transform-origin: 100% 0%;
+        -webkit-animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .help-tip p {
+        display: none;
+        text-align: left;
+        background-color: #fff;
+        padding: 20px;
+        width: 300px;
+        position: absolute;
+        border-radius: 3px;
+        /*box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);*/
+        left: 40px;
+        bottom: -10px;
+        color: #000;
+        font-size: 14px;
+        line-height: 0px;
+        border: 1px solid #000;
+    }
+
+        .help-tip p:before {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            left: -27px;
+            bottom: 10px;
+            border-width: 8px 19px 8px 8px;
+            border-style: solid;
+            border-color: transparent #000 transparent transparent;
+        }
+
+        .help-tip p:after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            left: -24px;
+            bottom: 12px;
+            border-width: 6px 18px 6px 6px;
+            border-style: solid;
+            border-color: transparent #fff transparent transparent;
+        }
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #bsaHolder, footer {
+        display: none;
+    }
+}
