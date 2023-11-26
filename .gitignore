@@ -9,9 +9,6 @@ lerna-debug.log*
 
 
 .DS_Store
-dist
-dist-ssr
-coverage
 *.local
 
 /cypress/videos/
